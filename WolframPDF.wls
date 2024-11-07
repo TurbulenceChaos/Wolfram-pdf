@@ -31,7 +31,7 @@ UsingFrontEnd[
     (* Make the cells into an in-memory notebook *)nb =
         CreateDocument[
             {
-                (* This is for the eyes *)TextCell["Testing .wls Scripts",
+                (* This is for the eyes *)TextCell[FileName <> ".wls Script",
                      "Title"], Cell[text, "Input"]
             }
         ];

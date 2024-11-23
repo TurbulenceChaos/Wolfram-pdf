@@ -1,38 +1,69 @@
-(* Content-type: application/vnd.wolfram.mathematica *)
+(* Content-type: application/vnd.wolfram.cdf.text *)
 
-(*** Wolfram Notebook File ***)
-(* http://www.wolfram.com/nb *)
+(*** Wolfram CDF File ***)
+(* http://www.wolfram.com/cdf *)
 
 (* CreatedBy='WolframEngine 14.1' *)
+
+(***************************************************************************)
+(*                                                                         *)
+(*                                                                         *)
+(*  Under the Wolfram FreeCDF terms of use, this file and its content are  *)
+(*  bound by the Creative Commons BY-SA Attribution-ShareAlike license.    *)
+(*                                                                         *)
+(*        For additional information concerning CDF licensing, see:        *)
+(*                                                                         *)
+(*         www.wolfram.com/cdf/adopting-cdf/licensing-options.html         *)
+(*                                                                         *)
+(*                                                                         *)
+(***************************************************************************)
 
 (*CacheID: 234*)
 (* Internal cache information:
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
-NotebookDataPosition[       160,          7]
-NotebookDataLength[    203285,       3424]
-NotebookOptionsPosition[    202498,       3402]
-NotebookOutlinePosition[    202895,       3418]
-CellTagsIndexPosition[    202852,       3415]
+NotebookDataPosition[      1090,         20]
+NotebookDataLength[    204783,       3471]
+NotebookOptionsPosition[    204670,       3456]
+NotebookOutlinePosition[    205067,       3472]
+CellTagsIndexPosition[    205024,       3469]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
-Cell["Test.wl script", "Title",ExpressionUUID->"be498572-deae-47c3-83c8-290742941f8b"],
+Cell["Test.wl", "Title",ExpressionUUID->"cab34b7e-a654-4e1f-b4cc-0ce864444c17"],
 
 Cell[CellGroupData[{
 
-Cell["\<\
-sol1 = DSolve[{D[y[x, t], t] + 2 D[y[x, t], x] == Sin[x], y[0, t] == 
-    Cos[t]}, y[x, t], {x, t}]
-
-sol2 = sol1[[1, 1, 2]]
-
-Plot3D[sol2, {x, -10, 10}, {t, -5, 5}]\
-\>", "Input",
- CellLabel->"In[1]:=",ExpressionUUID->"ccba085e-2c1f-4fa7-8c59-9efcd158b9f2"],
+Cell[BoxData[
+ RowBox[{"sol1", "=", 
+  RowBox[{"DSolve", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         SubscriptBox["\[PartialD]", "t"], 
+         RowBox[{"y", "[", 
+          RowBox[{"x", ",", "t"}], "]"}]}], "+", 
+        RowBox[{"2", " ", 
+         RowBox[{
+          SubscriptBox["\[PartialD]", "x"], 
+          RowBox[{"y", "[", 
+           RowBox[{"x", ",", "t"}], "]"}]}]}]}], "\[Equal]", 
+       RowBox[{"Sin", "[", "x", "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"y", "[", 
+        RowBox[{"0", ",", "t"}], "]"}], "\[Equal]", 
+       RowBox[{"Cos", "[", "t", "]"}]}]}], "}"}], ",", 
+    RowBox[{"y", "[", 
+     RowBox[{"x", ",", "t"}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "t"}], "}"}]}], "]"}]}]], "Input",
+ CellLabel->"In[1]:=",ExpressionUUID->"900f5f1d-3e7c-4207-bb10-8d6678c3b4d9"],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -49,8 +80,17 @@ Cell[BoxData[
          RowBox[{"t", "-", 
           FractionBox["x", "2"]}], "]"}]}], "-", 
        RowBox[{"Cos", "[", "x", "]"}]}], ")"}]}]}], "}"}], "}"}]], "Output",
- CellChangeTimes->{3.94136818345303*^9},
- CellLabel->"Out[1]=",ExpressionUUID->"543c9cde-275a-4cdb-8bf2-2671f7fff440"],
+ CellChangeTimes->{3.941371219059844*^9},
+ CellLabel->"Out[1]=",ExpressionUUID->"6918ed0b-ef8d-4dac-93ef-4e3038b41e2e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"sol2", "=", 
+  RowBox[{"sol1", "\[LeftDoubleBracket]", 
+   RowBox[{"1", ",", "1", ",", "2"}], "\[RightDoubleBracket]"}]}]], "Input",
+ CellLabel->"In[2]:=",ExpressionUUID->"005367a5-8c78-4e88-a454-8871cf1ff3a1"],
 
 Cell[BoxData[
  RowBox[{
@@ -62,8 +102,22 @@ Cell[BoxData[
       RowBox[{"t", "-", 
        FractionBox["x", "2"]}], "]"}]}], "-", 
     RowBox[{"Cos", "[", "x", "]"}]}], ")"}]}]], "Output",
- CellChangeTimes->{3.941368183475356*^9},
- CellLabel->"Out[3]=",ExpressionUUID->"1c1ada62-7cb0-452d-bf6d-04557ba82262"],
+ CellChangeTimes->{3.941371219072283*^9},
+ CellLabel->"Out[2]=",ExpressionUUID->"6c8f37fb-851e-45c1-a758-4a73a0d778a9"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Plot3D", "[", 
+  RowBox[{"sol2", ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", 
+     RowBox[{"-", "5"}], ",", "5"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[3]:=",ExpressionUUID->"c2705bbf-b74f-491d-bd24-af2e5a34bccd"],
 
 Cell[BoxData[
  Graphics3DBox[{GraphicsComplex3DBox[CompressedData["
@@ -3395,8 +3449,8 @@ kYLjPAeHVHdU0v8A0Zr+IA==
     Scaled[0.02], 
     Scaled[0.02]},
   Ticks->{Automatic, Automatic, Automatic}]], "Output",
- CellChangeTimes->{3.9413681836677837`*^9},
- CellLabel->"Out[5]=",ExpressionUUID->"5a78934e-fe4d-449e-9f63-daee1f367413"]
+ CellChangeTimes->{3.94137121926972*^9},
+ CellLabel->"Out[3]=",ExpressionUUID->"c0c6d7c5-7ce4-47b9-a84f-bdb54d059c2a"]
 }, Open  ]]
 }, Open  ]]
 },
@@ -3404,7 +3458,7 @@ WindowSize->{606, 683.25},
 WindowMargins->{{10.5, Automatic}, {Automatic, 28.5}},
 FrontEndVersion->"14.1 for Linux x86 (64-bit) (July 22, 2024)",
 StyleDefinitions->"Default.nb",
-ExpressionUUID->"1b1eb800-f858-4b66-a94a-a72f8ac9982b"
+ExpressionUUID->"254080f8-3b2d-4db6-b73e-2cea38cd1bd0"
 ]
 (* End of Notebook Content *)
 
@@ -3418,12 +3472,18 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[582, 22, 86, 0, 70, "Title",ExpressionUUID->"be498572-deae-47c3-83c8-290742941f8b"],
+Cell[1512, 35, 79, 0, 70, "Title",ExpressionUUID->"cab34b7e-a654-4e1f-b4cc-0ce864444c17"],
 Cell[CellGroupData[{
-Cell[693, 26, 266, 8, 70, "Input",ExpressionUUID->"ccba085e-2c1f-4fa7-8c59-9efcd158b9f2"],
-Cell[962, 36, 548, 16, 70, "Output",ExpressionUUID->"543c9cde-275a-4cdb-8bf2-2671f7fff440"],
-Cell[1513, 54, 391, 11, 70, "Output",ExpressionUUID->"1c1ada62-7cb0-452d-bf6d-04557ba82262"],
-Cell[1907, 67, 200563, 3331, 70, "Output",ExpressionUUID->"5a78934e-fe4d-449e-9f63-daee1f367413"]
+Cell[1616, 39, 874, 26, 70, "Input",ExpressionUUID->"900f5f1d-3e7c-4207-bb10-8d6678c3b4d9"],
+Cell[2493, 67, 549, 16, 70, "Output",ExpressionUUID->"6918ed0b-ef8d-4dac-93ef-4e3038b41e2e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3079, 88, 234, 4, 70, "Input",ExpressionUUID->"005367a5-8c78-4e88-a454-8871cf1ff3a1"],
+Cell[3316, 94, 391, 11, 70, "Output",ExpressionUUID->"6c8f37fb-851e-45c1-a758-4a73a0d778a9"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3744, 110, 335, 9, 70, "Input",ExpressionUUID->"c2705bbf-b74f-491d-bd24-af2e5a34bccd"],
+Cell[4082, 121, 200560, 3331, 70, "Output",ExpressionUUID->"c0c6d7c5-7ce4-47b9-a84f-bdb54d059c2a"]
 }, Open  ]]
 }, Open  ]]
 }
@@ -3431,3 +3491,4 @@ Cell[1907, 67, 200563, 3331, 70, "Output",ExpressionUUID->"5a78934e-fe4d-449e-9f
 *)
 
 (* End of internal cache information *)
+(* NotebookSignature uxDmSWmc9CqUNCKCxg9u3zGO *)

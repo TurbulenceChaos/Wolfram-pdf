@@ -2,7 +2,7 @@
 
 ## Usage
 ```shell
-wolframscript -f /path/to/WolframPDF.wls "/path/to/file.wls"
+wolframscript -f /path/to/WolframPDF.wl "/path/to/file.wl"
 ```
 
 ![WolframPDF.png](Images/WolframPDF.png)

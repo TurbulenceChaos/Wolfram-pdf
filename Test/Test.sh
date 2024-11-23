@@ -1,2 +1,2 @@
 #!/bin/bash
-wolframscript -f ../WolframPDF.wls "Test.wls"
+wolframscript -f ../WolframPDF.wl "Test.wl"

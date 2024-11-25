@@ -17,7 +17,7 @@ notebookEvaluatingQ[nb_] :=
 (* Pause until evaluation is finished *)
 
 notebookPauseForEvaluation[nb_] :=
-    While[notebookEvaluatingQ[nb], Print["..."] Pause[0.25]];
+    While[notebookEvaluatingQ[nb], Pause[0.25]];
 
 (* Import script as a list of deferred expressions *)
 

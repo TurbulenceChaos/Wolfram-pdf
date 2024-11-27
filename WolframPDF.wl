@@ -1,25 +1,10 @@
-file = $ScriptCommandLine[[2]];
+(* Options suggested by https://mathematica.stackexchange.com/a/133058/95308 *)
 
-dir = DirectoryName[file];
-
-fileName = FileBaseName[file];
-
-(* Get the currently evaluating cells in the notebook *)
-
-notebookEvaluatingCells[nb_] :=
-    Select[Cells[nb], "Evaluating" /. Developer`CellInformation[#]&];
-
-(* Check if the notebook is still evaluating *)
-
-notebookEvaluatingQ[nb_] :=
-    Length[notebookEvaluatingCells[nb]] > 0;
-
-(* Pause until evaluation is finished *)
-
-notebookPauseForEvaluation[nb_] :=
-    While[notebookEvaluatingQ[nb], Pause[0.25]];
+SetOptions[First[$Output], FormatType -> StandardForm];
 
 (* Import script as a list of deferred expressions *)
+
+file = $ScriptCommandLine[[2]];
 
 exprs = Import[file, "HeldExpressions"] /. HoldComplete -> Defer;
 
@@ -30,14 +15,16 @@ cells =
             ExpressionCell[e, "Input"]
         ] /@ exprs;
 
-cells = Join[{TextCell[fileName <> ".wl", "Title"]}, cells];
+cells = Join[{TextCell[FileNameTake @ file, "Title"]}, cells];
 
 UsingFrontEnd[
     nb = CreateDocument[cells];
-    SelectionMove[nb, All, Notebook];
-    SelectionEvaluate[nb];
-    notebookPauseForEvaluation[nb];
-    (* Export the notebook as CDF and PDF files *)
-    Export[dir <> fileName <> #, nb]& /@ {".cdf", ".pdf"};
+    NotebookEvaluate[nb, InsertResults -> True];
+    Export[StringDrop[file, -StringLength @ FileExtension @ file] <> 
+        #, nb]& /@ {"cdf", "pdf"};
     NotebookClose[nb];
 ];
+
+(* If you use wolfram -f WolframPDF.wl "file.wl", add this line to stop frontend *)
+
+Developer`UninstallFrontEnd[]

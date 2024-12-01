@@ -23,17 +23,17 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[      1090,         20]
-NotebookDataLength[    204768,       3471]
-NotebookOptionsPosition[    204655,       3456]
-NotebookOutlinePosition[    205052,       3472]
-CellTagsIndexPosition[    205009,       3469]
+NotebookDataLength[    207284,       3529]
+NotebookOptionsPosition[    206942,       3510]
+NotebookOutlinePosition[    207339,       3526]
+CellTagsIndexPosition[    207296,       3523]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
-Cell["Test.wl", "Title",ExpressionUUID->"e8172774-a02e-40cf-9437-c156d28fb7b3"],
+Cell["Test.wl", "Title",ExpressionUUID->"7f564bb4-65ea-4041-9220-6d8ea6af46a3"],
 
 Cell[CellGroupData[{
 
@@ -63,7 +63,7 @@ Cell[BoxData[
      RowBox[{"x", ",", "t"}], "]"}], ",", 
     RowBox[{"{", 
      RowBox[{"x", ",", "t"}], "}"}]}], "]"}]}]], "Input",
- CellLabel->" In[1]:=",ExpressionUUID->"c75a2afe-0988-4cea-8a25-38145f1ec318"],
+ CellLabel->" In[1]:=",ExpressionUUID->"349aaa56-7f38-40ac-882e-8eb66a3ba77b"],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -80,8 +80,8 @@ Cell[BoxData[
          RowBox[{"t", "-", 
           FractionBox["x", "2"]}], "]"}]}], "-", 
        RowBox[{"Cos", "[", "x", "]"}]}], ")"}]}]}], "}"}], "}"}]], "Output",
- CellChangeTimes->{3.9416789275123043`*^9},
- CellLabel->"",ExpressionUUID->"1049f57c-e0dd-4a6c-9371-6cb2573d6f17"]
+ CellChangeTimes->{3.942033416463315*^9},
+ CellLabel->"",ExpressionUUID->"f1a086f9-a698-47c0-9333-955acdfdc8fd"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -90,7 +90,7 @@ Cell[BoxData[
  RowBox[{"sol2", "=", 
   RowBox[{"sol1", "\[LeftDoubleBracket]", 
    RowBox[{"1", ",", "1", ",", "2"}], "\[RightDoubleBracket]"}]}]], "Input",
- CellLabel->" In[2]:=",ExpressionUUID->"02efdee9-088e-458f-a8f9-b30b3b32694b"],
+ CellLabel->" In[2]:=",ExpressionUUID->"3ad00e2f-bb60-4b3e-9772-6a9af8706847"],
 
 Cell[BoxData[
  RowBox[{
@@ -102,8 +102,8 @@ Cell[BoxData[
       RowBox[{"t", "-", 
        FractionBox["x", "2"]}], "]"}]}], "-", 
     RowBox[{"Cos", "[", "x", "]"}]}], ")"}]}]], "Output",
- CellChangeTimes->{3.941678927524683*^9},
- CellLabel->"",ExpressionUUID->"0749ab15-4cee-4d7d-a0aa-c9524c200ca7"]
+ CellChangeTimes->{3.942033416475769*^9},
+ CellLabel->"",ExpressionUUID->"0beb7337-da80-431f-b106-41f929e4b5e7"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -117,7 +117,7 @@ Cell[BoxData[
    RowBox[{"{", 
     RowBox[{"t", ",", 
      RowBox[{"-", "5"}], ",", "5"}], "}"}]}], "]"}]], "Input",
- CellLabel->" In[3]:=",ExpressionUUID->"41646598-130a-4163-80a7-77acbe95e9c4"],
+ CellLabel->" In[3]:=",ExpressionUUID->"0278c987-9529-404e-b28c-c845b12e98f0"],
 
 Cell[BoxData[
  Graphics3DBox[{GraphicsComplex3DBox[CompressedData["
@@ -1783,7 +1783,7 @@ o2LfiDM1zijDPBR3Qmoq96JxrIz1Fr/E11Peocz0vl1R/f8DFPH11A==
             "]], 
            Polygon3DBox[{{2697, 2696, 3675, 1760, 1761, 3676}, {2786, 1660, 
             1909, 3704, 2701, 2702}}]},
-          Annotation[#, "Charting`Private`Tag$2065#1"]& ]],
+          Annotation[#, "Charting`Private`Tag$2171#1"]& ]],
         Lighting->{{"Ambient", 
            RGBColor[0.30100577, 0.22414668499999998`, 0.090484535]}, {
           "Directional", 
@@ -3449,8 +3449,62 @@ kYLjPAeHVHdU0v8A0Zr+IA==
     Scaled[0.02], 
     Scaled[0.02]},
   Ticks->{Automatic, Automatic, Automatic}]], "Output",
- CellChangeTimes->{3.941678927727007*^9},
- CellLabel->"",ExpressionUUID->"ab16c684-52b1-4ae5-acd5-9c9029567c33"]
+ CellChangeTimes->{3.942033416727458*^9},
+ CellLabel->"",ExpressionUUID->"be1a6b26-a3ce-4848-ad5e-8b045faf33d4"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"Sin", "[", 
+      RowBox[{"n", " ", "x"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0", ",", 
+       RowBox[{"2", " ", "\[Pi]"}]}], "}"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"n", ",", "1", ",", "20"}], "}"}]}], "]"}]], "Input",
+ CellLabel->" In[4]:=",ExpressionUUID->"73d26b1b-9626-4238-a4ab-17e9106c46d9"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`n$$ = 1, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`n$$], 1, 20, ControlType -> Manipulator}}, 
+    Typeset`size$$ = {360., {103.46057863018498`, 109.08557863018498`}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
+    Typeset`keyframeActionsQ$$ = False, Typeset`keyframeList$$ = {}}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`n$$ = 1}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$, Typeset`keyframeActionsQ$$, 
+        Typeset`keyframeList$$}, "Body" :> Plot[
+        Sin[$CellContext`n$$ $CellContext`x], {$CellContext`x, 0, 2 Pi}], 
+      "Specifications" :> {{$CellContext`n$$, 1, 20}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{405.1, {145.97620363018498`, 151.60120363018498`}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.942033416787141*^9},
+ CellLabel->"",ExpressionUUID->"6f0223a8-caa4-4ddd-8ad7-de7f2c24d8cb"]
 }, Open  ]]
 }, Open  ]]
 },
@@ -3458,7 +3512,7 @@ WindowSize->{606, 683.25},
 WindowMargins->{{10.5, Automatic}, {Automatic, 28.5}},
 FrontEndVersion->"14.1 for Linux x86 (64-bit) (July 22, 2024)",
 StyleDefinitions->"Default.nb",
-ExpressionUUID->"11754f1f-42f3-4887-9efc-f533dbe18b7b"
+ExpressionUUID->"e78ceb9f-4a05-499e-b14b-b37e20e50ad6"
 ]
 (* End of Notebook Content *)
 
@@ -3472,18 +3526,22 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[1512, 35, 79, 0, 70, "Title",ExpressionUUID->"e8172774-a02e-40cf-9437-c156d28fb7b3"],
+Cell[1512, 35, 79, 0, 70, "Title",ExpressionUUID->"7f564bb4-65ea-4041-9220-6d8ea6af46a3"],
 Cell[CellGroupData[{
-Cell[1616, 39, 875, 26, 70, "Input",ExpressionUUID->"c75a2afe-0988-4cea-8a25-38145f1ec318"],
-Cell[2494, 67, 544, 16, 70, "Output",ExpressionUUID->"1049f57c-e0dd-4a6c-9371-6cb2573d6f17"]
+Cell[1616, 39, 875, 26, 70, "Input",ExpressionUUID->"349aaa56-7f38-40ac-882e-8eb66a3ba77b"],
+Cell[2494, 67, 542, 16, 70, "Output",ExpressionUUID->"f1a086f9-a698-47c0-9333-955acdfdc8fd"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[3075, 88, 235, 4, 70, "Input",ExpressionUUID->"02efdee9-088e-458f-a8f9-b30b3b32694b"],
-Cell[3313, 94, 384, 11, 70, "Output",ExpressionUUID->"0749ab15-4cee-4d7d-a0aa-c9524c200ca7"]
+Cell[3073, 88, 235, 4, 70, "Input",ExpressionUUID->"3ad00e2f-bb60-4b3e-9772-6a9af8706847"],
+Cell[3311, 94, 384, 11, 70, "Output",ExpressionUUID->"0beb7337-da80-431f-b106-41f929e4b5e7"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[3734, 110, 336, 9, 70, "Input",ExpressionUUID->"41646598-130a-4163-80a7-77acbe95e9c4"],
-Cell[4073, 121, 200554, 3331, 70, "Output",ExpressionUUID->"ab16c684-52b1-4ae5-acd5-9c9029567c33"]
+Cell[3732, 110, 336, 9, 70, "Input",ExpressionUUID->"0278c987-9529-404e-b28c-c845b12e98f0"],
+Cell[4071, 121, 200554, 3331, 70, "Output",ExpressionUUID->"be1a6b26-a3ce-4848-ad5e-8b045faf33d4"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[204662, 3457, 437, 12, 70, "Input",ExpressionUUID->"73d26b1b-9626-4238-a4ab-17e9106c46d9"],
+Cell[205102, 3471, 1812, 35, 70, "Output",ExpressionUUID->"6f0223a8-caa4-4ddd-8ad7-de7f2c24d8cb"]
 }, Open  ]]
 }, Open  ]]
 }
@@ -3491,4 +3549,4 @@ Cell[4073, 121, 200554, 3331, 70, "Output",ExpressionUUID->"ab16c684-52b1-4ae5-a
 *)
 
 (* End of internal cache information *)
-(* NotebookSignature nxD0cCCl@15J3BwoTWrmM0nc *)
+(* NotebookSignature zvD2@Ens8bKvKCgWNNx3EqJr *)

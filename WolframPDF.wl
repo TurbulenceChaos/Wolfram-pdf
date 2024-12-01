@@ -6,13 +6,30 @@ SetOptions[First[$Output], FormatType -> StandardForm];
 
 file = $ScriptCommandLine[[2]];
 
-exprs = Import[file, "HeldExpressions"] /. HoldComplete -> Defer;
+exprs = Import[file, "HeldExpressions"];
 
 (* Convert expressions into notebook cells *)
 
+(* Defer manipulate: https://community.wolfram.com/groups/-/m/t/37054 *)
+
 cells =
-    Function[e,
-            ExpressionCell[e, "Input"]
+    Function[expr,
+            If[StringContainsQ[ToString[expr], "Manipulate"],
+                With[{expr = expr /. HoldComplete -> ReleaseHold},
+                    ExpressionCell[
+                        Block[{BoxForm`$UseTextFormattingWhenEvaluating
+                             = True},
+                            RawBoxes[MakeBoxes[expr]]
+                        ]
+                        ,
+                        "Input"
+                    ]
+                ]
+                ,
+                With[{expr = expr /. HoldComplete -> Defer},
+                    ExpressionCell[expr, "Input"]
+                ]
+            ]
         ] /@ exprs;
 
 cells = Join[{TextCell[FileNameTake @ file, "Title"]}, cells];

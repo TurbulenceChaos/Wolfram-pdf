@@ -14,21 +14,11 @@ exprs = Import[file, "HeldExpressions"];
 
 cells =
     Function[expr,
-            If[StringContainsQ[ToString[expr], "Manipulate"],
-                With[{expr = expr /. HoldComplete -> ReleaseHold},
-                    ExpressionCell[
-                        Block[{BoxForm`$UseTextFormattingWhenEvaluating
-                             = True},
-                            RawBoxes[MakeBoxes[expr]]
-                        ]
-                        ,
-                        "Input"
-                    ]
-                ]
-                ,
-                With[{expr = expr /. HoldComplete -> Defer},
-                    ExpressionCell[expr, "Input"]
-                ]
+            With[{expr = expr /. {HoldComplete -> Defer, Manipulate ->
+                 Defer[Manipulate], MatrixForm -> Defer[MatrixForm], TableForm -> Defer[
+                TableForm], TeXForm -> Defer[TeXForm], TraditionalForm -> Defer[TraditionalForm
+                ]}},
+                ExpressionCell[expr, "Input"]
             ]
         ] /@ exprs;
 

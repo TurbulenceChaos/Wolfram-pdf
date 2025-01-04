@@ -14,15 +14,19 @@ exprs = Import[file, "HeldExpressions"];
 
 cells =
     Function[expr,
-            With[{expr = expr /. {HoldComplete -> Defer, Manipulate ->
-                 Defer[Manipulate], MatrixForm -> Defer[MatrixForm], TableForm -> Defer[
-                TableForm], TeXForm -> Defer[TeXForm], TraditionalForm -> Defer[TraditionalForm
-                ]}},
-                ExpressionCell[expr, "Input"]
+            If[StringContainsQ[ToString[expr], "TextCell"],
+                With[{expr = First @ expr},
+                    expr
+                ]
+                ,
+                With[{expr = expr /. {HoldComplete -> Defer, Manipulate
+                     -> Defer[Manipulate], MatrixForm -> Defer[MatrixForm], TableForm -> 
+                    Defer[TableForm], TeXForm -> Defer[TeXForm], TraditionalForm -> Defer[
+                    TraditionalForm]}},
+                    ExpressionCell[expr, "Input"]
+                ]
             ]
         ] /@ exprs;
-
-cells = Join[{TextCell[FileNameTake @ file, "Title"]}, cells];
 
 UsingFrontEnd[
     nb = CreateDocument[cells];

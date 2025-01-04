@@ -1,3 +1,5 @@
+TextCell["Test.wl", "Title"]
+
 sol1 = DSolve[{D[y[x, t], t] + 2 D[y[x, t], x] == Sin[x], y[0, t] == 
     Cos[t]}, y[x, t], {x, t}]
 

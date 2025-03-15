@@ -5,6 +5,8 @@
 wolframscript -script /path/to/WolframPDF.wl "/path/to/file.wl"
 ```
 
+The image below showcases a demonstration of [WolframPDF](Images/WolframPDF.gif):
+
 ![WolframPDF.png](Images/WolframPDF.gif)
 
 ## Reference

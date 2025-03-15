@@ -1,3 +1,5 @@
+(* Usage: wolframscript -script /path/to/WolframPDF.wl "/path/to/file.wl" *)
+
 (* Options suggested by https://mathematica.stackexchange.com/a/133058/95308 *)
 
 SetOptions[First[$Output], FormatType -> StandardForm];

@@ -4,17 +4,25 @@
 **GitHub:** [TurbulenceChaos/Wolfram-pdf](https://github.com/TurbulenceChaos/Wolfram-pdf)
 
 ---
+## Introduction 
+Convert a wolfram script to PDF and CDF formats.
+
+Demo: [WolframPDF.gif](Images/WolframPDF.gif)
+
+![WolframPDF.png](Images/WolframPDF.gif)
 
 ## Usage
 ```shell
 wolframscript -script /path/to/WolframPDF.wl "/path/to/file.wl"
 ```
 
-Demo: [WolframPDF.gif](Images/WolframPDF.gif)
+or
 
-![WolframPDF.png](Images/WolframPDF.gif)
+```shell
+wolframscript -script https://raw.githubusercontent.com/TurbulenceChaos/Wolfram-pdf/refs/heads/main/WolframPDF.wl "Test.wl"
+```
 
-You can install the [vscode-wolfram-pdf](https://github.com/TurbulenceChaos/vscode-wolfram-pdf) package in VS Code to automatically convert WolframScript files into PDF and CDF formats. Simply click the `Play it` button in the top right corner to generate the output.
+You can install the [vscode-wolfram-pdf](https://github.com/TurbulenceChaos/vscode-wolfram-pdf) package to automatically convert a wolfram script into PDF and CDF formats by clicking the `Play it` button in the top right corner of VS Code.
 
 ## Reference
 1. [Mathematica Stack Exchange](https://mathematica.stackexchange.com/questions/293543/converting-wolfram-language-scripts-wls-into-pdfs)

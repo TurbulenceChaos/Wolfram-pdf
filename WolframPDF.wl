@@ -34,7 +34,7 @@ UsingFrontEnd[
     nb = CreateDocument[cells];
     NotebookEvaluate[nb, InsertResults -> True];
     Export[StringDrop[file, -StringLength @ FileExtension @ file] <> 
-        #, nb]& /@ {"nb", "pdf"};
+        #, nb]& /@ {"cdf", "pdf"};
     NotebookClose[nb];
 ];
 
